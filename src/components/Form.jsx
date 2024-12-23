@@ -1,9 +1,11 @@
-function Form {
+function Form() {
 
     return (
-        <section>
-            <h2>Form Blog</h2>
-            <input type="text" name="nome" />
+
+        <section className="input-group my-4">
+            <input type="text" className="form-control" />
+            <button className="btn btn-outline-secondary" type="button">Insert</button>
+            <button className="btn btn-outline-secondary" type="button">Delete</button>
         </section>
     )
 }
