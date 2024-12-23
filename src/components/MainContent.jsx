@@ -1,5 +1,5 @@
 import CardContent from "./CardContent";
-
+import Form from "./Form";
 
 function MainContent() {
 
@@ -9,7 +9,7 @@ function MainContent() {
         <>
             <main className="container ">
                 <CardContent />
-
+                <Form />
             </main>
         </>
     );
