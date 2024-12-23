@@ -3,7 +3,7 @@ import posts from "../data/posts"
 
 function CardContent() {
     const [postsList, setPostList] = useState(posts)
-    const image = "/img/polmoni.png"
+
 
     function deletePost(id) {
 
@@ -16,7 +16,7 @@ function CardContent() {
                 {
                     postsList.map((posts) => posts.published && (
                         <div className="card" style={{ width: '18rem' }} key={posts.id}>
-                            <img className="card-img-top" src={image} alt={posts.title}></img>
+                            <img className="card-img-top" src={posts.image} alt={posts.title}></img>
                             <div className="card-body">
                                 <h5 className="card-title">{posts.title}</h5>
                                 <p className="card-text">{posts.content}</p>

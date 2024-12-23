@@ -16,6 +16,11 @@ form {
   width: 100%;
 }
 
+button {
+  margin-left: 10px;
+
+}
+
 /* FOOTER */
 footer {
   background-color: #333333;
