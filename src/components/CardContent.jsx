@@ -1,9 +1,14 @@
-
+import { useState } from "react";
 import posts from "../data/posts"
 
 function CardContent() {
-    const postsList = [...posts];
+    const [postsList, setPostList] = useState(posts)
     const image = "/img/polmoni.png"
+
+    function deletePost(id) {
+
+        setPostList(posts.filter((el) => el.id !== id))
+    }
 
     return (
         <>
@@ -16,12 +21,14 @@ function CardContent() {
                                 <h5 className="card-title">{posts.title}</h5>
                                 <p className="card-text">{posts.content}</p>
                                 <a href="#" className="btn btn-primary" >Leggi di più</a>
+                                <button onClick={() => deletePost(posts.id)} className="btn btn-primary">Delete</button>
+
                             </div>
                         </div>
                     ))
                 }
 
-            </div>
+            </div >
         </>
     )
 };

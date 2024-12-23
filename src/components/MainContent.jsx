@@ -9,6 +9,7 @@ function MainContent() {
         <>
             <main className="container ">
                 <CardContent />
+
                 <Form />
             </main>
         </>
