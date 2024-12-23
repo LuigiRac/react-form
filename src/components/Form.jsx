@@ -1,18 +1,24 @@
 import { useState } from "react";
+import posts from "../data/posts";
 
 function Form() {
     const [userPosts, setUserPosts] = useState('Inserisci nuovo post')
+    const [postsList, setPostsList] = useState(posts);
+
     function handleSubmit(e) {
         e.preventDefault();
-        console.log(userPosts)
+
+        const newPostsList = [...postsList];
+        newPostsList.push(userPosts)
+        setPostsList(newPostsList)
+        console.log(newPostsList)
     }
     return (
 
         <section className="input-group my-4">
             <form className="d-flex " onSubmit={handleSubmit}>
                 <input type="text" className="form-control" value={userPosts} onChange={(e) => setUserPosts(e.target.value)} />
-                <button className="btn btn-outline-secondary" type="button">Insert</button>
-                <button className="btn btn-outline-secondary" type="button">Delete</button>
+                <button className="btn btn-outline-secondary" type="submit">Insert</button>
             </form>
         </section>
     )
