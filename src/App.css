@@ -10,6 +10,12 @@ body {
   padding: 20px;
 }
 
+/* MAIN */
+
+form {
+  width: 100%;
+}
+
 /* FOOTER */
 footer {
   background-color: #333333;
